@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Trading Indicator Learning Simulator untuk belajar indikator teknikal saham secara visual, interaktif, dan berbasis simulasi.">
+  <title>Trading Indicator Learning Simulator</title>
+  <script>
+    tailwind = {
+      config: {
+        theme: {
+          extend: {
+            colors: {
+              appDark: "#08111F",
+              appNavy: "#0F1B2D",
+              appGreen: "#22C55E",
+              appRed: "#EF4444",
+              appYellow: "#FACC15",
+              appBlue: "#3B82F6",
+              appPurple: "#8B5CF6",
+              appText: "#F8FAFC",
+              appMuted: "#94A3B8"
+            }
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="appShell" class="app-shell">
+    <div id="drawerOverlay" class="drawer-overlay hidden" aria-hidden="true"></div>
+
+    <aside id="sidebar" class="sidebar" aria-label="Navigasi utama"></aside>
+
+    <div class="main-panel">
+      <header id="topbar" class="topbar"></header>
+
+      <div id="pageLoader" class="page-loader hidden" aria-hidden="true">
+        <div class="skeleton skeleton-title"></div>
+        <div class="skeleton-grid">
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+          <div class="skeleton skeleton-card"></div>
+        </div>
+      </div>
+
+      <main id="pageRoot" class="page-root" tabindex="-1"></main>
+
+      <footer class="app-footer">
+        <p>Dibuat oleh vickydisini</p>
+        <p>Trading Indicator Learning Simulator &mdash; Edukasi, bukan rekomendasi investasi.</p>
+      </footer>
+    </div>
+
+    <nav id="bottomNav" class="bottom-nav" aria-label="Navigasi mobile"></nav>
+  </div>
+
+  <div id="toastContainer" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button id="modalClose" class="icon-button modal-close" type="button" aria-label="Tutup modal">
+        <i data-lucide="x"></i>
+      </button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="script.js"></script>
+</body>
+</html>
